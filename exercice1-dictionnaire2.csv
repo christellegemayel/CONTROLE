@@ -1,0 +1,29 @@
+Propriété,Entité,Type,contrainte
+id,identifiant auteur,int,primary key
+firstname,prenom de l'auteur,varchar (255),not null
+lastname,nom de famille de l'auteur,varchar (255),not null
+country,pays d'origine de l'auteur,varchar (255),not null
+date_of_birth,date de naissance de l'auteur,date,not null
+date_of_death,date de mort de l'auteur,date,null
+id,identifiant de l'editeur,int,primary key
+name,prenom de l'éditeur,varchar (255),not null
+id,identifiant du membre,int,primary key
+firstname,prenom du membre,varchar(255),not null
+lastname,nom du membre,varchar(255),not null
+email,email du membre,varchar(255),not null
+date_of_birth,date anniversaire du membre,date,not null
+registred,statut d'inscription,boolean,not null
+id,identifiant du livre,int,primary key
+title,titre du livre,varchar(255),not null
+year,année de publication,int,not null
+author_id,reference a l'identifiant de l'auteur,int,foreign key
+isbn,numeroe isbn de l'édition,varchar(255),primary key
+book_id,identifiant du livre,int,foreign key
+editor_id,identifiant editeur,int,foreign key
+publication_date,date de publication de l'édition,date,not null
+id,identifiant de l'emprun,int,primary key
+book_edition_isbn,reference a l'edition,varchar(255),foreign key
+member_id,identifiant du membre,int,foreign key
+loan_date,date d'emprunt,date,not null
+return_date,date de retour,date,not null
+is_returned,indique si le livre a ete retourné,boolean,not null

@@ -1,0 +1,11 @@
+nom de l'attribut,entité/association,type,description
+NuméroSS,ENFANT,Identifiant de l'enfant unique,Primary key
+NomENF,ENFANT,Nom de l'enfant,not nul
+Prénom,ENFANT,Prénom de l'enfant,not nul
+CodeEcole,ECOLE,Identifiant unique de l'école,primary key
+NomEC,ECOLE,Nom de l'école,not nul
+Code Postal,COMMUNE,Identifiant unique de la commune,primary key
+NomC,COMMUNE,Nom de la commune,not nul
+"NuméroSS,Code Postal",habite,relation enntre un ENFANT et une COMMUNE,Foreign key
+"NumeroSS,CodeEcole",Fréquente,Relation entre un enfant et une ECOLE,Foreign key
+"CodeEcole, Code Postal",Se situe,Relation entre une ecole et une commune,Foreign key
